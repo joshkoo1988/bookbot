@@ -14,10 +14,11 @@ def letter_counts(text):
     lower_text = text.lower()
     alphabet_count = {}
     for letter in lower_text:
-        if letter in alphabet_count:
-            alphabet_count[letter] += 1
-        else:
-            alphabet_count[letter] = 1
+        if letter.isalpha():
+            if letter in alphabet_count:
+                alphabet_count[letter] += 1
+            else:
+                alphabet_count[letter] = 1
     sorted_alphabet_count = dict(sorted(alphabet_count.items()))
     return sorted_alphabet_count
 
