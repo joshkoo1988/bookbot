@@ -1,14 +1,15 @@
 def main():
     book_path = "books/frankenstein.txt"
     text = get_book_text(book_path)
+    print ("--- Begin Report of books/Frankenstein.txt ---\n")
     count = word_count(text)
     alpha_count = letter_counts(text)
     for letter,count in alpha_count.items():
-            print(f"{letter}: {count}")
+            print(f"The {letter} character was found {count} times")
 
 def word_count(text):
     count = text.split()
-    return len(count)
+    print(f"The word count is {len(count)} \n")
 
 def letter_counts(text):
     lower_text = text.lower()
